@@ -1,7 +1,7 @@
 package br.com.boletojuros.adapter.datasource.database;
 
 import br.com.boletojuros.adapter.datasource.database.repositories.BoletoCalculadoRepository;
-import br.com.boletojuros.adapter.datasource.mapper.BoletoCalculadoMapper;
+import br.com.boletojuros.adapter.datasource.mapper.BoletoCalculoMapper;
 import br.com.boletojuros.core.domain.BoletoCalculado;
 import br.com.boletojuros.core.port.out.SalvarCalculoBoletoPort;
 import org.springframework.stereotype.Component;
@@ -10,9 +10,9 @@ import org.springframework.stereotype.Component;
 public class SalvarBoletoCalculado implements SalvarCalculoBoletoPort {
 
     private final BoletoCalculadoRepository repository;
-    private final BoletoCalculadoMapper mapper;
+    private final BoletoCalculoMapper mapper;
 
-    public SalvarBoletoCalculado(BoletoCalculadoRepository repository, BoletoCalculadoMapper mapper) {
+    public SalvarBoletoCalculado(BoletoCalculadoRepository repository, BoletoCalculoMapper mapper) {
         this.repository = repository;
         this.mapper = mapper;
     }
