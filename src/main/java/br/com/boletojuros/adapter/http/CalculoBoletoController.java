@@ -27,7 +27,7 @@ public class CalculoBoletoController {
         this.mapper = mapper;
     }
 
-    @PostMapping(path = "/calculo", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/calculo")
     @Operation(summary = "Calcular juros de um boleto")
     public ResponseEntity<CalculoBoletoResponse> calcularBoleto(@Valid @RequestBody CalculoBoletoRequest boleto) {
         var boletoCalculado = calculoBoletoPort.executar(boleto.getCodigo(), boleto.getDataPagamento());

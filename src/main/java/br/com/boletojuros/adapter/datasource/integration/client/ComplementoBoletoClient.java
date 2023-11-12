@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 )
 public interface ComplementoBoletoClient {
 
-    @GetMapping(path = "/{codigo}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/{codigo}")
     BoletoDTO getBoleto(@PathVariable String codigo);
 }
