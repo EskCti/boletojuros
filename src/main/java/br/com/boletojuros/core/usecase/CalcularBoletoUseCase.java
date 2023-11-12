@@ -51,7 +51,7 @@ public class CalcularBoletoUseCase implements CalculoBoletoPort {
 
         salvarCalculoBoletoPort.executar(boletoCalculado);
 
-        return null;
+        return boletoCalculado;
     }
 
     private void validar(Boleto boleto) {
